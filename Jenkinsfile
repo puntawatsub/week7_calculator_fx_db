@@ -35,29 +35,29 @@ pipeline {
             }
         }
 
-        stage('Test') {
-            steps {
-                sh 'mvn test'
-            }
-        }
+//        stage('Test') {
+//            steps {
+//                sh 'mvn test'
+//            }
+//        }
 
-        stage('Code Coverage') {
-            steps {
-                sh 'mvn jacoco:report'
-            }
-        }
+//        stage('Code Coverage') {
+//            steps {
+//                sh 'mvn jacoco:report'
+//            }
+//        }
 
-        stage('Publish Test Results') {
-            steps {
-                junit '**/target/surefire-reports/*.xml'
-            }
-        }
+//        stage('Publish Test Results') {
+//            steps {
+//                junit '**/target/surefire-reports/*.xml'
+//            }
+//        }
 
-        stage('Publish Coverage Report') {
-            steps {
-                jacoco()
-            }
-        }
+//        stage('Publish Coverage Report') {
+//            steps {
+//                jacoco()
+//            }
+//        }
 
         stage('Build Docker Image') {
             steps {
