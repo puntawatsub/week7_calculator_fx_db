@@ -22,7 +22,7 @@ public class ResultService {
     }
 
     private static String getDatabaseUrl() {
-        return "jdbc:mariadb://" + getDatabaseHost() + ":3307/" + DB_NAME +
+        return "jdbc:mariadb://" + getDatabaseHost() + ":3306/" + DB_NAME +
                 "?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC";
     }
 
